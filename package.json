@@ -1,0 +1,15 @@
+{
+  "name": "et-menu-updater",
+  "version": "1.0.0",
+  "description": "A simple app that polls menu directory and moves any changed files to the client directory.",
+  "main": "Application.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "watch": "^0.18.0"
+  }
+}
