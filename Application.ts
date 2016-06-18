@@ -17,9 +17,8 @@ class Application {
             clientDir: undefined
         };
         if (argv.length == 0) {
-            const config = this.readConfig();
-            config.watchDir = config.watchDir;
-            config.clientDir = config.clientDir;
+            config = this.readConfig();
+            console.log(`Using previous configuration. Watching directory: ${config.watchDir}. Copying files to directory: ${config.clientDir}`);
         } else if (argv.length == 2) {
             config.watchDir = argv[0];
             config.clientDir = argv[1];
@@ -36,11 +35,7 @@ class Application {
 
     private readConfig(): Config {
         try {
-            const config = JSON.parse(fs.readFileSync("config.json").toString());
-            return {
-                watchDir: config.watchDir,
-                clientDir: config.clientDir
-            };
+            return JSON.parse(fs.readFileSync("config.json").toString());
         } catch (ex) {
             console.error("Cannot open config.json.");
             process.exit(1);

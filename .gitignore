@@ -1,5 +1,9 @@
 # Ignore generated js
 *.js
+*.js.map
+
+# Ignore vs code related files
+.vscode
 
 # Ignore the generated config
 config.json
