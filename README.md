@@ -10,6 +10,6 @@ Compile the application with typescript compiler:
 
 Run the application:
 
-node ./Application.js <watch dir> <client dir>
+`node ./Application.js <watch dir> <client dir>`
 
 If no parameters are given, uses the previously used parameters.
